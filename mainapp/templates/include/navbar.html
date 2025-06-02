@@ -1,0 +1,23 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-5">
+    <div class="container-fluid align-items-center">
+        <a class="navbar-brand" href="#">
+            <img class="img-fluid" width="40" height="40" src="{% static 'img/logo.svg' %}" alt="">
+            <span class="px-2">PAAing</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mx-auto gap-4">
+                <li class="nav-item"><a class="nav-link {% if request.path == '/' %}activ{% endif %}" href="{% url 'index' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link {% if request.path == '/pricing' %}activ{% endif %}" href="{% url 'pricing' %}">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link {% if request.path == '/contact' %}activ{% endif %}" href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+            <div class="d-flex auth gap-3">
+                <button class="btn btn-outline-success rounded-pill fw-bold">Login</button>
+                <a class="btn btn-light rounded-pill" href="#">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</nav>

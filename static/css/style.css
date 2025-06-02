@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", Helvetica, Arial, serif;
+    background-color: #fff;
+    /* color: #333; */
+}
+
+p{
+    unicode-bidi: isolate;
+}
+
+.bg-primary {
+    background-color: #12141d !important;
+}
+
+.btn-outline-success {
+    border-color: #1bd889 !important;
+}
+
+.btn-outline-success:hover {
+    background-color: #1b1c21 !important;
+    color: #1bd889 !important;
+}
+
+.highlight {
+    color: #1bd889;
+    /* font-weight: bold; */
+}
+
+/* navbar */
+nav {
+    height: 90px;
+}
+
+#navbarNav a,
+#navbarNav button {
+    font-size: 0.9rem;
+}
+
+.auth a,
+.auth button {
+    padding: 2px 12px;
+}
+
+.navbar-brand {
+    /* color: #1bd889; */
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+    padding: 0 !important;
+    padding-bottom: 3px;
+}
+
+.nav-link:hover {
+    color: #1bd889 !important;
+}
+
+.nav-item .activ {
+    color: #1bd889 !important;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #1bd889;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    color: #1bd889;
+    width: 100%;
+}
+
+/* footer */
+footer {
+    margin: 0;
+    padding: 30px 0;
+    background-color: #121212;
+    font-weight: 100;
+}
+
+footer a {
+    padding-left: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* main */
+.hero {
+    text-align: center;
+    background: #12141d url('../../static/img/hero-bg.svg') no-repeat center;
+    background-size: cover;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.lead {
+    color: #bbb;
+    letter-spacing: 2px;
+}
+
+form {
+    max-width: 600px;
+}
+
+form .form-control::placeholder {
+    color: #bbb;
+}
+
+.run-btn {
+    background-color: #1bd889;
+    color: #fff;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
+.table-responsive {
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.table th,
+.table td {
+    /* padding: 8px; */
+    vertical-align: top;
+}
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    width: 15%;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    width: 35%;
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+    width: 20%;
+}
+
+.table th:nth-child(4),
+.table td:nth-child(4) {
+    width: 30%;
+}
+
+hr{
+    max-height: 0.1mm;
+}

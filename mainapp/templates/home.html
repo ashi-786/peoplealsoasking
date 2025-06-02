@@ -1,0 +1,426 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'include/head.html' %}
+
+<body>
+    {% include 'include/navbar.html' %}
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1 class="display-2 text-white">
+                <span class="highlight">People</span> Also Ask Research <span class="highlight">Tool</span>
+            </h1>
+            <p class="h4 lead mt-2 w-75">
+                Understand your users with live "People Also Asked" data and intent clustering by topic.
+            </p>
+            <form class="mx-auto my-4">
+                <div class="bg-white p-4 rounded-4 text-center">
+                    <div class="d-flex mb-3">
+                        <div class="d-flex" style="border-bottom: 1px solid #000;">
+                            <input type="text" name="main_kw" class="form-control border-0"
+                                placeholder="e.g. Affordable Web Hosting Services">
+                            <span data-bs-toggle="tooltip" title="Pro Account Feature"
+                                class="text-decoration-underline text-muted w-100" style="cursor: pointer;"
+                                onclick="document.getElementById('uploadInput').click();">
+                                Or upload CSV
+                            </span>
+                            <input type="file" id="uploadInput" accept=".csv, .xlsx" style="display: none;">
+                        </div>
+                        <div class="">
+                            <button class="run-btn ms-2">
+                                Run <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-2">
+                        <div class="w-75">
+                            <select class="form-select rounded-pill">
+                                <option selected>Global / US (www.google.com)</option>
+                                <option>Afghanistan (www.google.com.af)</option>
+                                <option>Albania (www.google.al)</option>
+                                <option>Algeria (www.google.dz)</option>
+                                <option>American Samoa (www.google.as)</option>
+                                <option>Andorra (www.google.ad)</option>
+                                <option>Angola (www.google.it.ao)</option>
+                                <option>Anguilla (www.google.com)</option>
+                                <option>Anguilla (www.google.com)</option>
+                            </select>
+                        </div>
+                        <div class="">
+                            <select class="form-select rounded-pill" disabled>
+                                <option selected>Standard search depth</option>
+                                <option>Deep search depth</option>
+                                <option>Bulk search depth</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <span><strong>3 free credits</strong> left until 08:55 AM May 28</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Feature Sections -->
+    <div class="container-fluid p-0 features">
+        <section class="py-5 text-center border-bottom" style="background-color: #f5f5f5;">
+            <div class="container">
+                <h3 class="highlight">Content Planning & E-E-A-T Optimization</h3>
+                <p>Use real search data to develop topical authority, improve SEO, and craft better content strategies.
+                </p>
+                <div class="w-50 mx-auto">
+                    <img src="{% static 'img/feature1.png' %}" class="img-fluid my-4" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center border-bottom">
+            <div class="container">
+                <h3 class="highlight">Discover What People Really Want to Know About Your Topic</h3>
+                <p>Live keyword clustering to map intent and surface gaps in your content.</p>
+                <div class="w-50 mx-auto">
+                    <img src="{% static 'img/feature2.png' %}" class="img-fluid my-4" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center border-bottom" style="background-color: #f5f5f5;">
+            <div class="container">
+                <h3 class="highlight">Zero Volume Keyword Discovery</h3>
+                <p>Find keywords before they trend. Use our AI tools to surface zero-volume opportunities.</p>
+                <div class="w-50 mx-auto">
+                    <img src="{% static 'img/feature3.png' %}" class="img-fluid my-4" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center border-bottom">
+            <div class="container">
+                <h3 class="highlight">AI Answer Generator</h3>
+                <p>Generate answers to common queries to improve your topical coverage and semantic SEO.</p>
+                <div class="w-50 mx-auto">
+                    <img src="{% static 'img/feature4.png' %}" class="img-fluid my-4" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center border-bottom" style="background-color: #f5f5f5;">
+            <div class="container">
+                <h3 class="highlight">Work Smarter, Not Harder: Simplify Your Research</h3>
+                <p>Speed up research with direct access to real PAA data, CSV export, and bulk query features.</p>
+                <div class="w-50 mx-auto">
+                    <img src="{% static 'img/feature5.png' %}" class="img-fluid my-4" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="py-5 text-center border-bottom">
+            <div class="container">
+                <h3 class="highlight">Your Content Idea Generator: Never Run Out of Ideas Again</h3>
+                <p>Use semantic relationships to discover fresh angles and evergreen topics.</p>
+                <div class="w-50 mx-auto">
+                    <img src="{% static 'img/feature6.png' %}" class="img-fluid my-4" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="text-center border-bottom" style="background-color: #f5f5f5;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-7 pt-5 text-start">
+                        <h3 class="highlight">PNG Export</h3>
+                        <p class="pt-2 pb-5">Quickly visualise intent and relationships between questions by exporting data by PNG.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-7 pt-5 text-start">
+                        <h3 class="highlight">CSV Export</h3>
+                        <p class="pt-2 pb-5">Instantly download PAA data including The question set The answer snippet Google provides The URL of the ranking page The page title of the ranking page Encoded relationship data Allowing for programmatic processing.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-7 pt-5 text-start">
+                        <h3 class="highlight">Deep Search</h3>
+                        <p class="pt-2 pb-5">Uncover hidden insights with Deep Search. Dive deep into any topic and retrieve an extensive list of questions — averaging 150 per query. Gain a broader understanding, explore related subtopics, and build a well-rounded content strategy with ease.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-7 pt-5 text-start">
+                        <h3 class="highlight">Bulk Search</h3>
+                        <p class="pt-2 pb-5">Bulk search allows you to conduct People Also Ask research at scale, uploading up to 1,000 questions at once in a CSV and getting a zip download containing all of the data from a CSV export.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-7 pt-5 text-start">
+                        <h3 class="highlight">Search History</h3>
+                        <p class="pt-2 pb-5">Manage your previous searches from your dashboard, instantly recalling previous cached searches for free and downloading historical data.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="w-50 mx-auto">
+                    <img src="{% static 'img/feature7.png' %}" class="img-fluid my-4" alt="Search Options">
+                </div>
+            </div>
+        </section>
+        <section class="faq-section py-5">
+            <div class="container">
+                <h1 class="text-center mb-4">
+                    <span>You've Got Questions?</span>
+                    <span>We've Got Answers!</span>
+                </h1>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse1">
+                                What is PeopleAlsoAsking.com?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                PeopleAlsoAsking.com is a SaaS tool that helps users extract 'People Also Ask'(PAA)
+                                questions from Google search results. It’s designed for content creators, SEO
+                                professionals, and marketers to discover valuable insights and topics for their content
+                                strategies. You can interact with this data on the site to explore it, export it to
+                                image graphs for quick presentation to clients, or into CSV format to process it with
+                                other tools, saving a huge amount of time.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse2">
+                                Who can benefit from using PeopleAlsoAsking.com?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Content creators, SEO professionals, digital marketers, bloggers, and businesses looking
+                                to enhance their content and SEO strategies can benefit from this tool.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse3">
+                                What are 'People Also Ask' questions?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                'People Also Ask' questions are related queries that Google displays in a collapsible
+                                box on its search results pages. These questions often reflect user intent and can be a
+                                rich source of topic ideas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse4">
+                                Can I export the questions generated by the tool?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, you can export the extracted questions in various formats like CSV or Excel for
+                                further analysis and planning.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse5">
+                                Can the tool handle non-English languages?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, PeopleAlsoAsking.com supports multiple languages, depending on the keyword and
+                                Google's regional settings.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq6">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse6">
+                                Is my data safe with PeopleAlsoAsking.com?
+                            </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely. We prioritize user data security and follow industry-standard practices to
+                                protect your information.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq7">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse7">
+                                How frequently is the question database updated?
+                            </button>
+                        </h2>
+                        <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The tool fetches live data from Google for every query, ensuring the results are
+                                up-to-date.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq8">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse8">
+                                Why are there no results for my query?
+                            </button>
+                        </h2>
+                        <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We gather and organize data from Google’s 'People Also Ask' (PAA) results. If a PAA box
+                                doesn’t appear for your search term on Google, no results will be returned. To check,
+                                perform the same search on Google. If you see a PAA box but the app doesn’t return
+                                results, please contact support for assistance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Results Sections -->
+    <div class="results px-4 py-5" style="background-color: #f8f8f8; display: none;">
+        <div class="table-responsive">
+            <table class="table">
+                <thead style="background-color: #f3f2f7;">
+                    <tr>
+                        <th>Parent</th>
+                        <th>Tile / URL</th>
+                        <th>Question</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+                <tbody class="paa-list">
+                    <!-- <tr>
+                        <td colspan="4" class="text-secondary text-center">No Record Found</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% include 'include/footer.html' %}
+    <!-- <script>
+        document.querySelector(".run-btn").addEventListener("click", () => {
+            const main_kw = document.querySelector("input[name=main_kw]").value;
+            
+            fetch("/api/run-scraper/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ main_kw })
+            })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                document.querySelector(".features").style.display = "none";
+                document.querySelector(".results").style.display = "block";
+                const dataList = document.querySelector(".paa-list");
+                dataList.innerHTML = "";
+                if (data.length > 0) {
+                    data.forEach(item => {
+                        dataList.insertAdjacentHTML('beforeend', `
+                        <tr>
+                            <td>${item.parent_kw}</td>
+                            <td>
+                                <p>${item.title}</p>
+                                <p>
+                                    <a href="${item.link}" target="_blank">${item.link}</a>
+                                </p>
+                            </td>
+                            <td>${item.question}</td>
+                            <td>${item.answer}</td>
+                        </tr>
+                        `);
+                    });
+                } else {
+                    dataList.insertAdjacentHTML('beforeend', `
+                    <tr>
+                        <td colspan="4" class="text-secondary text-center">No Record Found</td>
+                    </tr>
+                    `);
+                }
+            })
+            .catch(err => console.error(err));
+        });
+    </script> -->
+    <script>
+        $(function () {
+            const socket = new WebSocket(
+                'ws://' + window.location.host + 'ws/api/run-scraper/');
+
+            socket.onopen = function () {
+                console.log("WebSocket connected");
+            };
+
+            socket.onmessage = function (e) {
+                const data = JSON.parse(e.data);
+                console.log("Received from WS:", data);
+
+                if (data.type === "scraper_result") {
+                    $(".features").hide();
+                    $(".results").show();
+                    $(".paa-list").empty();
+
+                    if (data.results.length > 0) {
+                        data.results.forEach(item => {
+                            $(".paa-list").append(`
+                                <tr>
+                                    <td>${item.parent_kw}</td>
+                                    <td>
+                                        <p>${item.title || ''}</p>
+                                        <p><a href="${item.link || '#'}" target="_blank">${item.link || ''}</a></p>
+                                    </td>
+                                    <td>${item.question}</td>
+                                    <td>${item.answer}</td>
+                                </tr>
+                            `);
+                        });
+                    } else {
+                        $(".paa-list").append(`
+                            <tr>
+                                <td colspan="4" class="text-secondary text-center">No Record Found</td>
+                            </tr>
+                        `);
+                    }
+                } else if (data.type === "scraper_error") {
+                    alert("Error: " + data.message);
+                } else {
+                    console.log(data.message);
+                }
+            };
+
+            socket.onclose = function () {
+                console.log("WebSocket disconnected");
+            };
+
+            $('.run-btn').on('click', function () {
+                const main_kw = $('input[name=main_kw]').val();
+                // if (!main_kw) {
+                //     alert("Keyword is required!");
+                //     return;
+                // }
+                socket.send(JSON.stringify({
+                    type: "run_scraper",
+                    main_kw: main_kw
+                }));
+            });
+        });
+    </script>
+</body>
+
+</html>
