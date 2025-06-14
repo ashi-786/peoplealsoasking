@@ -16,11 +16,7 @@ async def create_browser_context(playwright):
     ])
     context = await browser.new_context(
         viewport={"width": 1366, "height": 768},
-        user_agent=(
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/114.0.0.0 Safari/537.36"
-        ),
+        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
         locale='en-US',
         timezone_id="America/New_York",
     )
@@ -110,8 +106,6 @@ async def scrape_single_query_with_retry(context, query, max_questions, retries=
 async def scrape_main_keyword(context, main_kw, max_depth=3, max_questions=4):
     results = []
     visited = set()
-    
-    # Start with main_kw at depth 1
     current_level_queries = [main_kw]
 
     for depth in range(1, max_depth + 1):
@@ -161,6 +155,7 @@ async def scrape_google_paa(main_kw):
     max_questions = 4
 
     async with async_playwright() as playwright:
+        print(f"Scraping Started...")
         browser, context = await create_browser_context(playwright)
         results = await scrape_main_keyword(context, main_kw, max_depth=max_depth, max_questions=max_questions)
         print(f"Scraping complete. Total questions scraped: {len(results)}")

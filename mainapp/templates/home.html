@@ -360,15 +360,15 @@
     </script> -->
     <script>
         $(function () {
-            const socket = new WebSocket(
-                'ws://' + window.location.host + 'ws/api/run-scraper/');
+            let scraper_url = `ws://${window.location.host}/ws/api/run-scraper/`;
+            const socket = new WebSocket(scraper_url);
 
             socket.onopen = function () {
                 console.log("WebSocket connected");
             };
 
             socket.onmessage = function (e) {
-                const data = JSON.parse(e.data);
+                let data = JSON.parse(e.data);
                 console.log("Received from WS:", data);
 
                 if (data.type === "scraper_result") {
@@ -400,7 +400,7 @@
                 } else if (data.type === "scraper_error") {
                     alert("Error: " + data.message);
                 } else {
-                    console.log(data.message);
+                    console.log(data);
                 }
             };
 
